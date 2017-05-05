@@ -41,4 +41,5 @@ public class SoldierTest {
 
         Assertions.assertThat(soldier.getWeapon()).isEqualTo(Weapon.BAREFIST);
     }
+
 }
