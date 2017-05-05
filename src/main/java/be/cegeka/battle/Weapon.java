@@ -3,11 +3,12 @@ package be.cegeka.battle;
 /**
  * Created by roel on 05.05.17.
  */
-public enum Weapon {
-    AXE (3),
-    SWORD(2),
-    SPEAR(2),
-    BAREFIST(1);
+public class Weapon {
+    public final static Weapon AXE = new Weapon(3);
+    public final static Weapon SWORD= new Weapon(2);
+    public final static Weapon SPEAR= new Weapon(2);
+    public final static Weapon BAREFIST= new Weapon(1);
+
 
     private int damage;
 
