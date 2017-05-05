@@ -8,29 +8,28 @@ public class WarTest {
 
     private War war;
     private Soldier soldier,soldier1,soldier2,soldier3;
-    private Army germanArmy, army1;
+    private Army germanArmy, allied;
 
     @Before
     public void setUp() throws Exception {
-        soldier = new Soldier("Roel");
-        soldier1 = new Soldier("Rodrigo");
-        soldier2 = new Soldier("William");
-        soldier3 = new Soldier ("Thomas");
+        soldier = new Soldier("Techno Roel Viking", new Axe(20));
+        soldier1 = new Soldier("Rodrigo", Weapon.BAREFIST);
+        soldier2 = new Soldier("William", Weapon.SWORD);
+        soldier3 = new Soldier ("Thomas", Weapon.SPEAR);
 
         germanArmy.addTroops(soldier1);
         germanArmy.addTroops(soldier2);
         germanArmy.addTroops(soldier);
         germanArmy.addTroops(soldier3);
 
-        army1.addTroops(soldier3);
-        army1.addTroops(soldier2);
-        army1.addTroops(soldier1);
-        army1.addTroops(soldier);
-
+        allied.addTroops(soldier3);
+        allied.addTroops(soldier2);
+        allied.addTroops(soldier1);
+        allied.addTroops(soldier);
     }
 
-    @Test
-    public void ArmiesEngageInWar() throws Exception {
-
-    }
+//    @Test
+//    public void ArmiesEngageInWar() throws Exception {
+//
+//    }
 }
