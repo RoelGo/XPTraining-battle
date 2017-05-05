@@ -1,4 +1,4 @@
-# XPTraining-battle
+# TEAM TECHNO VIKINGS
 
 ## Travis Setup
 
