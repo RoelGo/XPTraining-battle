@@ -67,5 +67,15 @@ public class FightingSoldierTest {
         assertThat(winner).isEqualTo(attacker);
     }
 
+    @Test
+    public void loserShouldBeDeleted() throws Exception {
+        FightingSoldier attacker = new FightingSoldier(viking,vikings);
+        FightingSoldier defender = new FightingSoldier(friday,teamFriday);
 
+        attacker.attack(defender);
+
+        assertThat(teamFriday.getTroops()).doesNotContain(friday);
+
+
+    }
 }

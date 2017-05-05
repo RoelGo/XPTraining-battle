@@ -20,4 +20,6 @@ public class Army {
         return troops.get(0);
     }
 
+    public void killedInAction(Soldier soldier) {troops.remove(soldier);}
+
 }
