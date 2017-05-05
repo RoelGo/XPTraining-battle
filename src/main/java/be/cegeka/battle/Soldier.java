@@ -7,12 +7,16 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
 public class Soldier {
 
     private final String name;
-    private Weapon weapon;
+    private Weapon weapon = Weapon.BAREFIST;
 
+
+    public Soldier(String name, Weapon weapon) {
+        Validate.isTrue(isNotBlank(name));
+        this.weapon = weapon;
+        this.name = name;
+    }
 
     public Soldier(String name) {
-        Validate.isTrue(isNotBlank(name));
-        this.weapon = Weapon.BAREFIST;
         this.name = name;
     }
 
@@ -22,5 +26,20 @@ public class Soldier {
 
     public Weapon getWeapon() {
         return weapon;
+    }
+
+    public Soldier attack(Soldier defender) {
+        if(attackerWins(defender)){
+            return this;
+        }
+        return defender;
+    }
+
+    private boolean attackerWins(Soldier defender) {
+        return this.getWeaponDamage() >= defender.getWeaponDamage();
+    }
+
+    private int getWeaponDamage() {
+        return this.getWeapon().getDamage();
     }
 }
