@@ -4,9 +4,6 @@ import java.util.List;
 
 import static com.google.common.collect.Lists.newArrayList;
 
-/**
- * Created by christom on 5/05/2017.
- */
 public class Army {
 
     private List<Soldier> troops = newArrayList();
@@ -22,4 +19,5 @@ public class Army {
     public Soldier getFrontMan() {
         return troops.get(0);
     }
+
 }
