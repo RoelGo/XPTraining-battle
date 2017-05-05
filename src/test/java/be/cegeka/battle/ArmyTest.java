@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by christom on 5/05/2017.
- */
 public class ArmyTest {
 
     Army army;
@@ -40,5 +37,6 @@ public class ArmyTest {
         army.addTroops(soldier2);
 
         assertThat(army.getFrontMan()).isEqualTo(soldier);
+
     }
 }
