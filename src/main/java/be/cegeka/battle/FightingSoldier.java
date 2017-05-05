@@ -29,6 +29,7 @@ public class FightingSoldier {
             defender.killSoldier();
             return this;
         }
+        this.killSoldier();
         return defender;
     }
 

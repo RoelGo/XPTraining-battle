@@ -68,14 +68,21 @@ public class FightingSoldierTest {
     }
 
     @Test
-    public void loserShouldBeDeleted() throws Exception {
+    public void losingDefenderShouldBeDeleted() throws Exception {
         FightingSoldier attacker = new FightingSoldier(viking,vikings);
         FightingSoldier defender = new FightingSoldier(friday,teamFriday);
 
         attacker.attack(defender);
 
         assertThat(teamFriday.getTroops()).doesNotContain(friday);
+    }
+    @Test
+    public void loserShouldBeDeleted() throws Exception {
+        FightingSoldier attacker = new FightingSoldier(friday,teamFriday);
+        FightingSoldier defender = new FightingSoldier(viking,vikings);
 
+        attacker.attack(defender);
 
+        assertThat(teamFriday.getTroops()).doesNotContain(friday);
     }
 }
