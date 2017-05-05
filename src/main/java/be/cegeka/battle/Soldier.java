@@ -28,18 +28,7 @@ public class Soldier {
         return weapon;
     }
 
-    public Soldier attack(Soldier defender) {
-        if(attackerWins(defender)){
-            return this;
-        }
-        return defender;
-    }
-
-    private boolean attackerWins(Soldier defender) {
-        return this.getWeaponDamage() >= defender.getWeaponDamage();
-    }
-
-    private int getWeaponDamage() {
+    public int getWeaponDamage() {
         return this.getWeapon().getDamage();
     }
 }

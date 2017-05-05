@@ -35,39 +35,12 @@ public class SoldierTest {
 
         Assertions.assertThat(soldier.getWeapon()).isNotNull();
     }
+
     @Test
     public void soldier_hasBareFistByDefault() throws Exception {
         Soldier soldier = new Soldier("Techno Viking");
 
         Assertions.assertThat(soldier.getWeapon()).isEqualTo(Weapon.BAREFIST);
-    }
-    @Test
-    public void attacker_canWin(){
-        Soldier attacker = new Soldier("Techno Viking",Weapon.AXE);
-        Soldier defender = new Soldier("Friday",Weapon.BAREFIST);
-
-        Soldier winner = attacker.attack(defender);
-
-        assertThat(winner).isEqualTo(attacker);
-
-    }
-    @Test
-    public void defender_canWin(){
-        Soldier defender = new Soldier("Techno Viking",Weapon.AXE);
-        Soldier attacker = new Soldier("Friday",Weapon.BAREFIST);
-
-        Soldier winner = attacker.attack(defender);
-
-        assertThat(winner).isEqualTo(defender);
-    }
-    @Test
-    public void attacker_winsInDraw(){
-        Soldier attacker = new Soldier("Techno Viking",Weapon.AXE);
-        Soldier defender = new Soldier("Friday",Weapon.AXE);
-
-        Soldier winner = attacker.attack(defender);
-
-        assertThat(winner).isEqualTo(attacker);
     }
 
 }
