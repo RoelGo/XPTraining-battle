@@ -1,4 +1,4 @@
-# TEAM TECHNO VIKINGS
+# TECHNO VIKINGS
 
 ## Travis Setup
 
